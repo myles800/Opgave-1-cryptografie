@@ -6,8 +6,8 @@ await nacl.ready;
     }
     let sodium = nacl;
     return Object.freeze({
-        decrypt: (ciphertext,nonce)=> {
-            return sodium.crypto_secretbox_open_easy(ciphertext,nonce, key);
+        encrypt: (ciphertext,nonce)=> {
+            return sodium.crypto_secretbox_easy(ciphertext,nonce, key);
         }
   
     })
